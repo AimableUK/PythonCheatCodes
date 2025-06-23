@@ -1,11 +1,14 @@
 f = open('aim.txt','r') #to read
 print(f.read()) #this displays the whole file
-print(f.readline(),end="") #will display the first line of the file
+print(f.readline(),end="") # will display the first line of the file
 print(f.readline())
 
 f = open("abc","w") #this adds new data and erase the existing ones
 f = open("abc","a") #to append kabisa on the existing data
 f.write(" Kabisa")
+
+
+f = open('aim.txt', 'r')
 
 
 #2 this code will add data from myfile.txt to abc.txt

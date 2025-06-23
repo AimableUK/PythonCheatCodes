@@ -6,7 +6,7 @@ class Directrix:
 		self.m1 = m1
 		self.m2 = m2
 	
-	def addisResp():
+	def addisResp(self):
             c = self.m1 + self.m2
             return c
 
@@ -21,6 +21,8 @@ class Dealing(Directrix):
         m4 = int(input("2 enter the age"))
 	    m12 = self.m1 + self.m2
 		m34 = self.m3 + self.m4
+  
+
 			
 			
 
