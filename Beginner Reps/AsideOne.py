@@ -1,19 +1,30 @@
 
-x = 3
-r = x%2
 
-if r==0:
-    print("Even")
-elif r==1:
-    print("Odd")
-    if x<5:
-        print("Great")
-    else:
-        print("Poor Boy")
+# Looping in the Word
+y = 'NAVIN'
+for i in y:
+    print(i)
 
-else:
-    print("Prime")
+# Looping in List
+x = ['navin', 65, 2.5]
+for i in x:
+    print(i)
+# same as above
+for i in [2,6,'Paul']:
+    print(i)
 
+# Range
+# 11: Starting Point
+# 21: Ending Point
+# 3: Interval
+for i in range(11,21,3):
+    print(i)
 
+# reverse order
+for i in range(20,10,-1):
+    print(i)
 
-print("bye")
+# Condition in range:
+for i in range(1,21): # 1: Starting Point 21: Ending Point
+    if i%5!=0:
+        print(i)
