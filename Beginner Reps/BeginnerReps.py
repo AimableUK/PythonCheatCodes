@@ -106,6 +106,17 @@ for i in x:
 for i in [2, 6, 'Paul']:
     print(i)
 
+# FOR...Else
+nums = [12, 16, 18, 21, 26]
+
+for num in nums:
+
+    if num % 5 == 0:
+        print(num)
+        break
+else:
+    print("not found")
+
 # Range
 # 11: Starting Point
 # 21: Ending Point
@@ -176,3 +187,14 @@ for i in range(4, 0, -1):
     for j in range(i, 5):
         print(j, end="")
     print()
+
+# Prime Number:
+num = 7
+
+for i in range(2, num):
+    if num % i == 0:
+        print("not prime")
+        break
+else:
+    print("Prime")
+
