@@ -82,16 +82,15 @@ print("bye")
 
 i = 1
 
-while i<=5:
-    print("Great ",end="")
-    j=1
+while i <= 5:
+    print("Great ", end="")
+    j = 1
     while j <= 4:
-        print("rocks ",end="")
-        j=j+1
+        print("rocks ", end="")
+        j = j + 1
 
-    i=i+1
+    i = i + 1
     print()
-
 
 # FOR Loop
 # Looping in the Word
@@ -104,23 +103,23 @@ x = ['navin', 65, 2.5]
 for i in x:
     print(i)
 # same as above
-for i in [2,6,'Paul']:
+for i in [2, 6, 'Paul']:
     print(i)
 
 # Range
 # 11: Starting Point
 # 21: Ending Point
 # 3: Interval
-for i in range(11,21,3):
+for i in range(11, 21, 3):
     print(i)
 
 # reverse order
-for i in range(20,10,-1):
+for i in range(20, 10, -1):
     print(i)
 
 # Condition in range:
-for i in range(1,21): # 1: Starting Point 21: Ending Point
-    if i%5!=0:
+for i in range(1, 21):  # 1: Starting Point 21: Ending Point
+    if i % 5 != 0:
         print(i)
 
 # Break, Continue, Pass Statements
@@ -131,7 +130,7 @@ x = int(input("How many Candies you want"))
 i = 1
 
 while i <= x:
-    if i>av:
+    if i > av:
         print("Out of Stock")
         break
     print("Candy")
@@ -139,16 +138,41 @@ while i <= x:
 print("Bye")
 
 # Continue statement
-for i in range(1,101):
-    if i%3==0 and i%5==0:
+for i in range(1, 101):
+    if i % 3 == 0 and i % 5 == 0:
         continue
     print(i)
 print("Bye")
 
 # PASS: Means noe Code Ignore it
-for i in range(1,101):
-    if i%2!=0:
+for i in range(1, 101):
+    if i % 2 != 0:
         pass
     else:
         print(i)
 print("Bye")
+
+# Certain Pattern:
+# 1:
+for i in range(4):
+    for j in range(4):
+        print("# ", end="")
+    print()
+
+# 2:
+for i in range(5):
+    for j in range(i + 1):
+        print("# ", end="")
+    print()
+
+# 3:
+for i in range(5):
+    for j in range(4 - i):
+        print("# ", end="")
+    print()
+
+# 4:
+for i in range(4, 0, -1):
+    for j in range(i, 5):
+        print(j, end="")
+    print()
