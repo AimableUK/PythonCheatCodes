@@ -1,12 +1,19 @@
-import sys
 
-if len(sys.argv) != 3:
-    print("Usage: python add.py <number1> <number2>")
-    sys.exit(1)
+x = 3
+r = x%2
 
-try:
-    x = int(sys.argv[1])
-    y = int(sys.argv[2])
-    print(x + y)
-except ValueError:
-    print("Both arguments must be integers.")
+if r==0:
+    print("Even")
+elif r==1:
+    print("Odd")
+    if x<5:
+        print("Great")
+    else:
+        print("Poor Boy")
+
+else:
+    print("Prime")
+
+
+
+print("bye")
