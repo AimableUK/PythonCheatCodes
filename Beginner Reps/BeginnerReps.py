@@ -57,3 +57,68 @@ try:
     print(x + y)
 except ValueError:
     print("Both arguments must be integers.")
+
+# If Statement:
+x = 3
+r = x % 2
+
+if r == 0:
+    print("Even")
+elif r == 1:
+    print("Odd")
+    if x < 5:
+        print("Great")
+    else:
+        print("Poor Boy")
+
+else:
+    print("Prime")
+
+print("bye")
+
+# LOOPS
+
+# WHILE Loop:
+
+i = 1
+
+while i<=5:
+    print("Great ",end="")
+    j=1
+    while j <= 4:
+        print("rocks ",end="")
+        j=j+1
+
+    i=i+1
+    print()
+
+
+# FOR Loop
+# Looping in the Word
+y = 'NAVIN'
+for i in y:
+    print(i)
+
+# Looping in List
+x = ['navin', 65, 2.5]
+for i in x:
+    print(i)
+# same as above
+for i in [2,6,'Paul']:
+    print(i)
+
+# Range
+# 11: Starting Point
+# 21: Ending Point
+# 3: Interval
+for i in range(11,21,3):
+    print(i)
+
+# reverse order
+for i in range(20,10,-1):
+    print(i)
+
+# Condition in range:
+for i in range(1,21): # 1: Starting Point 21: Ending Point
+    if i%5!=0:
+        print(i)
