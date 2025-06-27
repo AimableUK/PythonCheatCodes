@@ -129,7 +129,7 @@ for i in range(20, 10, -1):
     print(i)
 
 # Condition in range:
-for i in range(1, 21):  # 1: Starting Point 21: Ending Point
+for i in range(1, 21):  # 1: Starting Point 21: Ending Point - 20
     if i % 5 != 0:
         print(i)
 
@@ -155,7 +155,7 @@ for i in range(1, 101):
     print(i)
 print("Bye")
 
-# PASS: Means noe Code Ignore it
+# PASS: Means no Code ~ Ignore it
 for i in range(1, 101):
     if i % 2 != 0:
         pass
@@ -197,4 +197,38 @@ for i in range(2, num):
         break
 else:
     print("Prime")
+
+# array:
+
+from array import *
+
+vals = array('i', [55, 9, 8, 4, 2])
+
+print(vals)  # all array list
+print(vals.buffer_info())  # (1786002774320, 5) (address, size)
+print(vals.reverse())  # to reverse
+print(vals[0])  # print the number on that index
+
+# Printing array values
+# 1
+for i in range(len(vals)):
+    print(vals[i])
+
+# 2
+for e in vals:
+    print(e)
+
+# Creating new array from the existing One
+newArray = array(vals.typecode, (a for a in vals))
+# 1
+for e in newArray:
+    print(e)
+# 2
+
+i = 0
+while i < len(newArray):
+    print(newArray[i])
+    i += 1
+
+
 
