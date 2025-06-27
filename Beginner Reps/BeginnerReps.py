@@ -230,5 +230,30 @@ while i < len(newArray):
     print(newArray[i])
     i += 1
 
+# array functions
+# Searching
+arr = array('i', [])
 
+n = int(input("Enter the length of the array: "))
 
+print()
+
+for i in range(n):
+    x = int(input("Enter the Value: "))
+    arr.append(x)
+
+print(arr)
+
+val = int(input("Enter the value of search: "))
+
+# 1
+k = 0
+for e in arr:
+    if e == val:
+        print(k)
+        break
+
+    k += 1
+
+# 2
+print(arr.index(val))
