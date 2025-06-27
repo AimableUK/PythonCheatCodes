@@ -1,7 +1,6 @@
 import math
 from numpy import *
 
-
 # 1. you can also use the alias like: import math as m
 # then to access it : m.sqrt();
 
@@ -221,7 +220,7 @@ for e in vals:
     print(e)
 
 # Creating new array from the existing One
-newArray = array(vals.typecode, (a for a in vals)) # this is right too: # (a*a for a in vals)
+newArray = array(vals.typecode, (a for a in vals))  # this is right too: # (a*a for a in vals)
 # 1
 for e in newArray:
     print(e)
@@ -237,7 +236,6 @@ while i < len(newArray):
 arr = array('i', [])
 
 n = int(input("Enter the length of the array: "))
-
 
 for i in range(n):
     x = int(input("Enter the Value: "))
@@ -263,18 +261,17 @@ print(arr.index(val))
 lin = linspace(0, 15, 16)
 
 # arange:
-arange = arange(1, 15, 2) # skips 2
+arange = arange(1, 15, 2)  # skips 2
 
 # lospace:
 arr = logspace(1, 40, 5)
-print("%.2f" %arr[4])
+print("%.2f" % arr[4])
 
 arra = ones(5)
 
 # COPYING ARRAY
 arr1 = array([1, 2, 3, 4, 5])
 arr2 = array([6, 1, 9, 3, 2])
-
 
 arr1 + 5
 
@@ -289,11 +286,43 @@ concatenate([arr1, arr2])
 
 # copying an array
 # 1
-arr1 = arr2 # but all still refer to one address
+arr1 = arr2  # but all still refer to one address
 
 # 2
-arr2 = arr1.view() # the ids are different ~ but changes occur for both on assignment they are linked
+arr2 = arr1.view()  # the ids are different ~ but changes occur for both on assignment they are linked
 
 # 3
-arr3 = arr1.copy() # each one is independent
+arr3 = arr1.copy()  # each one is independent
 
+# Working with Array Dimensions
+multiArr = array([
+    [1, 2, 3, 6, 2, 9],
+    [4, 5, 6, 7, 5, 3]
+])
+
+print(multiArr)
+print(multiArr.dtype)  # the type of data
+print(multiArr.ndim)  # number of dimension
+print(multiArr.shape)  # number of rows and columns
+print(multiArr.size)  # array size
+
+# Convert 2D to 1D
+multiSingle = multiArr.flatten()
+
+# convert 1D to 3D Array
+threeD = multiArr.reshape(3, 4)
+
+# convert 1D Array to 1 big Array with two 2D arrays
+Two2DArrays = multiArr.reshape(2, 2, 3)
+
+# MATRICES
+# making a matrix
+m = matrix(multiArr)
+n = matrix('1 2 3 6; 4 5 6 7')
+
+# all operations same as the array
+m.max() # the highest number
+
+m1 = matrix('1 2 3 6; 4 5 6 7')
+m2 = matrix('1 2 3 6; 4 5 6 7')
+m3 = m1+m2
