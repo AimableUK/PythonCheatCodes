@@ -1,4 +1,6 @@
 import math
+from numpy import *
+
 
 # 1. you can also use the alias like: import math as m
 # then to access it : m.sqrt();
@@ -219,7 +221,7 @@ for e in vals:
     print(e)
 
 # Creating new array from the existing One
-newArray = array(vals.typecode, (a for a in vals))
+newArray = array(vals.typecode, (a for a in vals)) # this is right too: # (a*a for a in vals)
 # 1
 for e in newArray:
     print(e)
@@ -236,7 +238,6 @@ arr = array('i', [])
 
 n = int(input("Enter the length of the array: "))
 
-print()
 
 for i in range(n):
     x = int(input("Enter the Value: "))
@@ -257,3 +258,42 @@ for e in arr:
 
 # 2
 print(arr.index(val))
+
+# linspace:
+lin = linspace(0, 15, 16)
+
+# arange:
+arange = arange(1, 15, 2) # skips 2
+
+# lospace:
+arr = logspace(1, 40, 5)
+print("%.2f" %arr[4])
+
+arra = ones(5)
+
+# COPYING ARRAY
+arr1 = array([1, 2, 3, 4, 5])
+arr2 = array([6, 1, 9, 3, 2])
+
+
+arr1 + 5
+
+# array addition
+arr1 + arr2
+
+# ....
+sin(arr1)  # to find the sin and other math functions
+sqrt(arr2)
+max(arr2)  # the large element
+concatenate([arr1, arr2])
+
+# copying an array
+# 1
+arr1 = arr2 # but all still refer to one address
+
+# 2
+arr2 = arr1.view() # the ids are different ~ but changes occur for both on assignment they are linked
+
+# 3
+arr3 = arr1.copy() # each one is independent
+
