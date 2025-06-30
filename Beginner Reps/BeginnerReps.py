@@ -440,7 +440,6 @@ x = 5
 result = fact(x)
 print(result)
 
-
 # lambda
 f = lambda a: a * a
 result = f(5)
@@ -449,3 +448,46 @@ print(result)
 f1 = lambda a, b: a + b
 res = f1(5, 6)
 print(res)
+
+
+# Decorators
+# 1
+def smart_div(func):
+    def inner(a, b):
+        if a < b:
+            a, b = b, a
+        return func(a, b)
+
+    return inner
+
+
+@smart_div
+def div(a, b):
+    print(a / b)
+
+
+div(2, 4)
+
+
+# 2
+
+# Step 1: Define the decorator
+def my_decorator(func):
+    def wrapper():
+        print("--- Before function ---")
+        func()
+        print("--- After function ---")
+
+    return wrapper
+
+
+# Step 2: Create the main function
+def greet():
+    print("I am learning Python")
+
+
+# Step 3: Apply the decorator
+greet = my_decorator(greet)
+
+# Step 4: Call the decorated function
+greet()
