@@ -393,3 +393,59 @@ def person(name, **data):
 
 
 person('navin', age=12, city='mumbai', phn=79768)
+
+
+# Fibonacci
+
+def fib(n):
+    a = 0
+    b = 1
+
+    if n == 1:
+        print(a)
+
+    elif n < 0:
+        print("please Enter a positive number")
+
+    elif n >= 89:
+        print("Please Enter a number less than 89")
+
+    else:
+        print(a)
+        print(b)
+
+        for i in range(2, n):
+            c = a + b
+            a = b
+            b = c
+
+            print(c)
+
+
+fib(5)
+
+
+# Factorial
+
+def fact(n):
+    f = 1
+
+    for i in range(1, n + 1):
+        f = f * i
+
+    return f
+
+
+x = 5
+result = fact(x)
+print(result)
+
+
+# lambda
+f = lambda a: a * a
+result = f(5)
+print(result)
+
+f1 = lambda a, b: a + b
+res = f1(5, 6)
+print(res)
