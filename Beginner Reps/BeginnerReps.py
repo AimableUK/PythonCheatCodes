@@ -321,8 +321,75 @@ m = matrix(multiArr)
 n = matrix('1 2 3 6; 4 5 6 7')
 
 # all operations same as the array
-m.max() # the highest number
+m.max()  # the highest number
 
 m1 = matrix('1 2 3 6; 4 5 6 7')
 m2 = matrix('1 2 3 6; 4 5 6 7')
-m3 = m1+m2
+m3 = m1 + m2
+
+
+# Functions
+# 1
+def add(x, y):
+    c = x + y
+    d = x - y
+    return c, d
+
+
+result1, result2 = add(5, 4)
+print(result1, result2)
+
+
+# 2
+def update(lst):
+    print(id(lst))
+
+    lst[1] = 25
+    print(id(lst))
+    print("x ", lst)
+
+
+lst = [10, 20, 30]
+print(id(lst))
+update(lst)
+print("lst ", lst)
+
+
+# 3
+def person(name, age=1):
+    print(name, age)
+
+
+person('able', 12)
+person(age='able', name=12)
+
+
+# 4 summation
+def sum(a, *b):
+    for i in b:
+        a = a + i
+    print(a)
+
+
+sum(5, 6, 34, 78)
+
+
+# when doing **--- you must add keywords
+# when doing *-- keywords not needed
+
+# 2
+# def person(name, *data):
+# person('navin', 12, 'mumbai', 79768)
+
+def person(name, **data):
+    print(name)
+
+    # 1
+    print(data)
+
+    # 2
+    for i, j in data.items():
+        print(i, j)
+
+
+person('navin', age=12, city='mumbai', phn=79768)
