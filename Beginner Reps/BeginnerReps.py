@@ -530,6 +530,7 @@ com2 = Computer("Ryzen 3", 8)
 com1.config()
 com2.config()
 
+
 # 2
 
 class Computer:
@@ -559,3 +560,33 @@ c1.update()
 
 print(c1.name)
 print(c2.age)
+
+
+# Inner Class:
+class Student:
+
+    def __init__(self, name, rollno):
+        self.name = name
+        self.rollno = rollno
+        self.lap = self.Laptop()
+
+    def show(self):
+        print(self.name, self.rollno)
+
+    class Laptop:
+
+        def __init__(self):
+            self.brand = 'HP'
+            self.cpu = 'i5'
+            self.ram = 8
+
+
+s1 = Student('Navin', 2)
+s2 = Student('Jenny', 3)
+
+s1.show()
+
+lap1 = s1.lap
+lap2 = s2.lap
+
+lap3 = Student.Laptop()
