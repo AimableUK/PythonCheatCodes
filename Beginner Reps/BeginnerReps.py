@@ -529,3 +529,33 @@ com2 = Computer("Ryzen 3", 8)
 
 com1.config()
 com2.config()
+
+# 2
+
+class Computer:
+
+    def __init__(self):
+        self.name = "navin"
+        self.age = 20
+
+    def update(self):
+        self.age = 30
+
+    def compare(self, other):
+        if self.age == other.age:
+            return True
+        else:
+            return False
+
+
+c1 = Computer()
+c1.age = 30
+c2 = Computer()
+
+if c1.compare(c2):
+    print("they are same")
+
+c1.update()
+
+print(c1.name)
+print(c2.age)
