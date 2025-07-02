@@ -590,3 +590,94 @@ lap1 = s1.lap
 lap2 = s2.lap
 
 lap3 = Student.Laptop()
+
+
+# Inheritance
+
+
+class A:
+
+    def feature1(self):
+        print("feauture 1 Working")
+
+    def feature2(self):
+        print("Feature 2 Working")
+
+
+class B(A):
+
+    def feature3(self):
+        print("feauture 3 Working")
+
+    def feature4(self):
+        print("Feature 4 Working")
+
+
+# Multilevel inheritance
+class C(B):
+
+    def feature5(self):
+        print("feauture 5 Working")
+
+
+# Multiple inheritance
+class D(B, C):
+
+    def feature6(self):
+        print("feauture 6 Working")
+
+
+a1 = A()
+a1.feature1()
+a1.feature2()
+
+b1 = B()
+b1.feature1()
+
+d1 = D()
+
+# 2
+class A:
+
+    def __init__(self):
+        print("In A init")
+
+    def feature1(self):
+        print("feauture 1 Working")
+
+    def feature2(self):
+        print("Feature 2 Working")
+
+
+class B:
+
+    def __init__(self):
+        # call Class A init class
+        # super().__init__()
+        print("In B init")
+
+    def feature3(self):
+        print("feauture 3 Working")
+
+    def feature4(self):
+        print("Feature 4 Working")
+
+# When you add super in init, will display class A init only
+# But only when if you havent called init B too
+class C(A,B):
+
+    def __init__(self):
+        # call Class A init class only
+        super().__init__()
+        print("In C init")
+
+    def feature3(self):
+        print("feauture 3 Working")
+
+
+# When you call the objet of B it will call be init func
+# But when it doesn't have init func it will call init of A
+# But using Super u an call init func Of A
+
+c = C()
+
