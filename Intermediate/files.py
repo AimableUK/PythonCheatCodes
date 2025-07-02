@@ -1,4 +1,4 @@
-f = open('aim.txt','r') #to read
+f = open('myData.txt','r') #to read
 print(f.read()) #this displays the whole file
 print(f.readline(),end="") # will display the first line of the file
 print(f.readline())
@@ -8,7 +8,7 @@ f = open("abc","a") #to append kabisa on the existing data
 f.write(" Kabisa")
 
 
-f = open('aim.txt', 'r')
+f = open('myData.txt', 'r')
 
 
 #2 this code will add data from myfile.txt to abc.txt
@@ -53,5 +53,5 @@ def process_file(filename):
         print(f"File '{filename}' not found.")
 
 # Example usage:
-filename = 'aim.txt'  # Replace with your actual file name
+filename = 'myData.txt'  # Replace with your actual file name
 process_file(filename)

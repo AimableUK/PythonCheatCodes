@@ -897,7 +897,6 @@ except Exception as e:
 finally:
     print("resource close")
 
-
 # THreading:
 from time import sleep
 
@@ -934,3 +933,41 @@ t1.join()
 t2.join()
 print("Bye")
 
+# Linear Search:
+
+# 1
+pos = -1
+
+def search(listaa, n):
+    i = 0
+    # for i in range(len(lista)+1):
+    for i,element in enumerate(listaa):
+        if listaa[i] == n:
+            globals()['pos'] = i
+            return True
+    return False
+
+
+lista = [5, 8, 4, 6, 9, 2]
+n = 9
+
+if search(lista, n):
+    print("Found at ", pos + 1)
+else:
+    print("Not found")
+
+#2 way
+
+def search(lista, n):
+    indices = [i for i, element in enumerate(lista) if element == n]
+    if indices:
+        print(f'found at indices {indices}')
+        return True
+    return False #this may not be put
+
+lista = [35, 89, 4, 6, 6, 12, 43]
+n = int(input("eneter a search number: "))
+if search(lista, n):
+    print('found')
+else:
+    print('not found')
