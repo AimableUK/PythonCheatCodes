@@ -896,3 +896,41 @@ except Exception as e:
     print("Something went Wrong")
 finally:
     print("resource close")
+
+
+# THreading:
+from time import sleep
+
+from threading import *
+
+
+class Hello(Thread):
+    def run(self):
+        for i in range(8):
+            print("Hello")
+            sleep(1)
+
+
+class Hi(Thread):
+    def run(self):
+        for i in range(8):
+            print("Hi")
+            sleep(1)
+
+
+t1 = Hello()
+t2 = Hi()
+
+# The threads have an inbuild function start that run
+# and an inbuild function run
+
+# To avoid threads overriding 0.2s sleep is added
+t1.start()
+sleep(0.2)
+t2.start()
+
+# this helps to execute other things when these threads are done
+t1.join()
+t2.join()
+print("Bye")
+
