@@ -681,3 +681,31 @@ class C(A,B):
 
 c = C()
 
+
+# Duck Typing
+class Pycharm:
+
+    def execute(self):
+        print("Compling")
+        print("Running")
+
+
+class Sublime:
+
+    def execute(self):
+        print("Spell Check")
+        print("Convention Check")
+        print("compiling")
+        print("Running")
+
+
+class Laptop:
+
+    def code(self, ide):
+        ide.execute()
+
+# ide = Pycharm
+ide = Sublime()
+
+lap1 = Laptop()
+lap1.code(ide)
