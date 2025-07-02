@@ -636,6 +636,7 @@ b1.feature1()
 
 d1 = D()
 
+
 # 2
 class A:
 
@@ -662,9 +663,10 @@ class B:
     def feature4(self):
         print("Feature 4 Working")
 
+
 # When you add super in init, will display class A init only
 # But only when if you havent called init B too
-class C(A,B):
+class C(A, B):
 
     def __init__(self):
         # call Class A init class only
@@ -704,11 +706,13 @@ class Laptop:
     def code(self, ide):
         ide.execute()
 
+
 # ide = Pycharm
 ide = Sublime()
 
 lap1 = Laptop()
 lap1.code(ide)
+
 
 # Operator Overloading
 class Student:
@@ -750,6 +754,7 @@ a = 9
 print(a)
 print(s1)
 
+
 # Method Overloading
 class Student:
 
@@ -764,7 +769,7 @@ class Student:
         if a is not None and b is not None and c is not None:
             s = a + b + c
         elif a is not None and b is not None:
-            s = a+b
+            s = a + b
         else:
             s = a
 
@@ -774,6 +779,7 @@ class Student:
 s1 = Student(58, 69)
 print(s1.sum(5, 8))
 
+
 # Method Overriding
 
 
@@ -782,11 +788,11 @@ class A:
     def show(self):
         print("in A Show")
 
+
 class B(A):
 
     def show(self):
         print("in B show")
-
 
 
 a1 = B()
@@ -826,10 +832,12 @@ class Programmer:
         whit.work()
         whit.process()
 
+
 com1 = Laptop()
 white = WhiteBoard()
 pro = Programmer()
-pro.work(com1,white)
+pro.work(com1, white)
+
 
 # Iterator:
 class TopTen:
@@ -853,6 +861,8 @@ values = TopTen()
 
 for i in values:
     print(i)
+
+
 # Generator:
 def topten():
     n = 1
@@ -869,3 +879,20 @@ values = topten()
 for i in values:
     print(i)
 
+# Exception Handling:
+a = 5
+b = 2
+
+try:
+    print("resource open")
+    print(a / b)
+    k = int(input("Enter a number: "))
+    print(k)
+except ZeroDivisionError as e:
+    print("You can't divide a number by Zero", e)
+except ValueError as e:
+    print("Invalid input")
+except Exception as e:
+    print("Something went Wrong")
+finally:
+    print("resource close")
