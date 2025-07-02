@@ -971,3 +971,20 @@ if search(lista, n):
     print('found')
 else:
     print('not found')
+
+
+# MySQL:
+
+import mysql.connector
+
+mydb = mysql.connector.connect(host='localhost', user='aimable', password='1234', database='malos')
+
+mycursor = mydb.cursor()
+
+mycursor.execute("select * from student")
+
+result = mycursor.fetchall()
+# result = mycursor.fetchone() to fecth One
+
+for i in result:
+    print(i)
