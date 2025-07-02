@@ -791,3 +791,43 @@ class B(A):
 
 a1 = B()
 a1.show()
+
+# Abstract Classes and Methods:
+from abc import ABC, abstractmethod
+
+
+class Computer(ABC):
+
+    @abstractmethod
+    def process(self):
+        pass
+
+
+class Laptop(Computer):
+
+    def process(self):
+        print("is running")
+
+
+class WhiteBoard(Computer):
+
+    def work(self):
+        print("is Whitting")
+
+    def process(self):
+        pass
+
+
+class Programmer:
+
+    def work(self, com, whit):
+        print("Solving Bugs")
+        com.process()
+        whit.work()
+        whit.process()
+
+com1 = Laptop()
+white = WhiteBoard()
+pro = Programmer()
+pro.work(com1,white)
+
